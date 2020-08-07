@@ -25,7 +25,7 @@ class Circle
 					cout << "\nThe age : " << age << endl;										// arg one
 				}
 				
-			Circle(float r,int a)
+			Circle(float r,int a) // : radius(r),age(r)
 				{
 					radius = r;
 					age = a;
