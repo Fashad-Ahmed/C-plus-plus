@@ -69,8 +69,6 @@
 //}
 
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 class hospital
@@ -85,7 +83,6 @@ class hospital
 		void getInput()
 		{
 			cout << "Enter Patient Name : " << endl;
-			//cin >> patientName;
 			getline(cin,patientName);
 			cout << "Enter the date on which patient is admitted : " << endl;
 			getline(cin , admissionDate);
@@ -110,12 +107,16 @@ class aged : public hospital
 		int agePatient;
 	
 	public:
-		void inputAge()
+		void getInput()
 		{
+			hospital :: getInput();
 			cout << "Enter Age of Patient : " << endl;cin >> agePatient;
+			cin.ignore();
+
 		}
-		void resultAge()
+		void showInput()
 		{
+			hospital :: showInput();
 			cout << "Patient's Age : " << agePatient << endl;
 		}
 		
@@ -125,22 +126,15 @@ class aged : public hospital
 int main()
 {
 	aged a1,a2;
-	
-	cout << "\nPATIENT 1 DATA\n" << endl;
-	
+		
 	a1.getInput();
-	a1.inputAge();
+	cout << "\nPATIENT 1 DATA\n" << endl;
 	a1.showInput();
-	a1.resultAge();
-	
-	cout << "\nPATIENT 2 DATA\n" << endl;
-	
+	cout << "\n\n";		
 	a2.getInput();
-	a2.inputAge();
+	cout << "\nPATIENT 2 DATA\n" << endl;	
 	a2.showInput();
-	a2.resultAge();
 	
 	cout << endl;
 	return 0;
-	
 }
