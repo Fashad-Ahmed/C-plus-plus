@@ -149,8 +149,8 @@ class conc
 
 int main()
 {
-    conc s1("Lioner");
-	conc s2("Andres");
+    conc s1("basket");
+	conc s2("ball");
     conc s3 = s1 + s2;
     cout << s3.get_ans() << endl;
 

@@ -12,8 +12,8 @@ class publication
 		void getdata()
 		{
 			cout << "\nEnter Name of Publication : " << endl;
-//			getline(cin,title);
-			cin >> title;
+			getline(cin,title);
+			cin.ignore();
 			cout << endl;
 			cout << "Enter it's price : " << endl;cin >> price;
 		}
