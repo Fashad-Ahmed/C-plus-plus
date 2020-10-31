@@ -47,22 +47,23 @@ int main()
 	daughter d1(10);
 	daughter d2(26);
 	
+    cout<<"\n Output before pointer applies to base class." << endl;
+	
 	f.iam();
 	s.iam();
 	d1.iam();
 	d2.iam();
 	
 	cout << "\n \t ****** " << endl;
-	
+    cout<<"\n Output after pointer applies to base class." << endl;
+
 	Father*ptr[3];
 	
 	ptr[0] = &s;ptr[0] -> iam();
 	ptr[1] = &d1;ptr[1] -> iam();
 	ptr[2] = &d2;ptr[2] -> iam();
 
-	
 	return 0;
-	
 }
 
 
