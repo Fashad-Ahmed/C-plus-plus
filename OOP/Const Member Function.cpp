@@ -21,5 +21,8 @@ class dpw
 	
 int main()
 {
-	;
+	dpw d1;
+	d1.confunc();
+	d1.ftw();
+	return 0;
 }
